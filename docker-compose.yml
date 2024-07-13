@@ -10,7 +10,9 @@ services:
       POSTGRES_PASSWORD: kevin
     ports:
       - "5432:5432"  # Puerto de PostgreSQL expuesto
-    
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
   web:
     build:
       context: .
@@ -21,6 +23,9 @@ services:
       - db
     environment:
       ASPNETCORE_ENVIRONMENT: Development  # Entorno de desarrollo para tu aplicación .NET
-      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=mydatabase;Username=myuser;Password=mypassword"  # Cadena de conexión a PostgreSQL
+      ConnectionStrings__DefaultConnection: "Host=db;Port=5432;Database=mibase3;Username=kevin;Password=kevin"  # Cadena de conexión a PostgreSQL
     links:
       - db
+
+volumes:
+  dbdata:
