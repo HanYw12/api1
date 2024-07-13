@@ -11,16 +11,15 @@ namespace Service.Interfaces
         {
             _contextDatabase = contextDatabase;
         }
-        public async Task<List<User>> GetUser()
+        public async Task<User> GetUser(string identificacionUser)
         {
             try
             {
-                var result = await _contextDatabase.User.ToListAsync();
-                return result;
+                var user = await _contextDatabase.User.SingleOrDefaultAsync(u => u.Identificacion == identificacionUser);
+                return user!;
             }
             catch
             {
-
                 return null!;
             }
         }

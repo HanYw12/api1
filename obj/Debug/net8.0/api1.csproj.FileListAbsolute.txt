@@ -36,3 +36,4 @@ c:\Users\kevin\Desktop\Integrador\Proyecto\api1\obj\Debug\net8.0\refint\api1.dll
 c:\Users\kevin\Desktop\Integrador\Proyecto\api1\obj\Debug\net8.0\api1.pdb
 c:\Users\kevin\Desktop\Integrador\Proyecto\api1\obj\Debug\net8.0\api1.genruntimeconfig.cache
 c:\Users\kevin\Desktop\Integrador\Proyecto\api1\obj\Debug\net8.0\ref\api1.dll
+c:\Users\kevin\Desktop\Integrador\Proyecto\api1\obj\Debug\net8.0\api1.sourcelink.json

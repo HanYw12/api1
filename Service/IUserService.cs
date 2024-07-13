@@ -4,6 +4,6 @@ namespace Service.Interfaces
 {
     public interface IUserService
     {
-        Task<List<User>> GetUser();
+        Task<User> GetUser(string identificacion);
     }
 }

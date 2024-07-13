@@ -21,7 +21,7 @@ namespace Controllers.UsuarioController
         {
             try
             {
-                var result = await _usuarioService.GetUser();
+                var result = await _usuarioService.GetUser(identificacion);
                 return Ok(result);
             }
             catch (Exception ex)

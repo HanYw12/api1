@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Tf8VpGaSvZI=",
+  "dgSpecHash": "bSozHEoj2/c=",
   "success": true,
-  "projectFilePath": "c:\\Users\\kevin\\Desktop\\Integrador\\Proyecto\\api1\\api1.csproj",
+  "projectFilePath": "C:\\Users\\kevin\\Desktop\\Integrador\\Proyecto\\api1\\api1.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kevin\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.5\\microsoft.aspnetcore.openapi.8.0.5.nupkg.sha512",
     "C:\\Users\\kevin\\.nuget\\packages\\microsoft.entityframeworkcore\\8.0.7\\microsoft.entityframeworkcore.8.0.7.nupkg.sha512",
