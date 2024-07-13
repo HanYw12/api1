@@ -23,5 +23,18 @@ namespace Service.Interfaces
                 return null!;
             }
         }
+        public async Task<List<User>> GetUsers()
+        {
+            try
+            {
+                var users = await _contextDatabase.User.ToListAsync();
+                return users;
+            }
+            catch
+            {
+                return null!;
+            }
+        }
+
     }
 }
