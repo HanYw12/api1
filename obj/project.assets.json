@@ -1171,11 +1171,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\kevin\\Desktop\\Integrador\\Proyecto\\api1\\api1.csproj",
+      "projectUniqueName": "C:\\Users\\kevin\\Desktop\\5to\\Servidores\\Practica nuve Reistro Civil\\api\\api1.csproj",
       "projectName": "api1",
-      "projectPath": "c:\\Users\\kevin\\Desktop\\Integrador\\Proyecto\\api1\\api1.csproj",
+      "projectPath": "C:\\Users\\kevin\\Desktop\\5to\\Servidores\\Practica nuve Reistro Civil\\api\\api1.csproj",
       "packagesPath": "C:\\Users\\kevin\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\kevin\\Desktop\\Integrador\\Proyecto\\api1\\obj\\",
+      "outputPath": "C:\\Users\\kevin\\Desktop\\5to\\Servidores\\Practica nuve Reistro Civil\\api\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\kevin\\AppData\\Roaming\\NuGet\\NuGet.Config"

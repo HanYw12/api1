@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using Microsoft.EntityFrameworkCore;
 using Persistencia;
 using Service.Interfaces;
@@ -14,9 +15,15 @@ var conexion = builder.Configuration.GetConnectionString("ConexionDataBase");
 builder.Services.AddDbContext<ContextDb>(option =>
     option.UseNpgsql(conexion)
 );
-
+builder.Services.AddHttpClient<IConsumirClient, ConsumirClient>(client =>
+{
+    client.BaseAddress = new Uri("http://ec2-52-207-143-169.compute-1.amazonaws.com"); // URL base de tu API
+    client.DefaultRequestHeaders.Accept.Clear();
+    client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
+});
 builder.Services.AddScoped<IUserService, UserService>();
-
+builder.Services.AddScoped<IConsumirClient, ConsumirClient>();
+builder.Services.AddScoped<ConsumirClient>();
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
@@ -26,6 +33,8 @@ builder.Services.AddCors(options =>
                .AllowAnyHeader();
     });
 });
+
+
 var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
@@ -60,7 +69,7 @@ var summaries = new[]
 
 app.MapGet("/weatherforecast", () =>
 {
-    var forecast =  Enumerable.Range(1, 5).Select(index =>
+    var forecast = Enumerable.Range(1, 5).Select(index =>
         new WeatherForecast
         (
             DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
